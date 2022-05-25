@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=Great+Vibes&family=Lobster&family=Noto+Serif+Display:ital,wght@0,200;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 $font: 'Dancing Script', cursive;
+$font-product :'Playfair Display', serif;
+$font-text : 'Barlow Condensed', sans-serif;
 $font_logo : 'Great Vibes', cursive; 
+$color-text : rgb(20, 20, 20);
+$color-title :rgba(19, 17, 15, 0.575) ;
 $color-navigation : rgba(246, 199, 117, 0.5);
 body{
     margin: 0px auto;
     padding: 0px;
-    background-color: rgba(251, 242, 247, 0.76);
-    width: 1920px;
+    background-color: rgba(247, 224, 202, 0.311);
+    width: auto;
 }
 .header{
     width: 100%;
-    height: 760px;  
-    background-image: linear-gradient( rgba(248, 228, 228, 0.2),rgba(219, 205, 213, 0.2)), url('../img/bg5.jpg');
-    background-size: cover;
+    height: 600px;  
     position: relative;
     .logo{
         position: absolute;
@@ -26,7 +29,7 @@ body{
         flex-direction: column;
         a{  
             font-family: $font_logo;           
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: bold;
             width: 100%;
             top: 2%;
@@ -50,7 +53,7 @@ body{
                 list-style-type: none;
                 a{
                     text-decoration: none;
-                    font-size: 1.6rem;
+                    font-size: 1.5rem;
                     color: rgba(251, 251, 251, 0.993);
                     font-family:  'Barlow Condensed', sans-serif;
                     font-weight: 900;
@@ -149,7 +152,6 @@ body{
             position: relative;
             width: 100%;
             height: 100%;
-            transition: 1s;
             img{
                 object-fit: cover;
                 width: 1920px;
@@ -173,8 +175,7 @@ body{
                 cursor: pointer;
             }
             label:hover{
-                background-color: antiquewhite;
-                transition: 1s;
+                background-color: rgb(221, 205, 187);
             }
         }
         .navigation-change{
@@ -200,6 +201,8 @@ body{
             ~ .slide
             {
                 left: 0%;
+                transition: 1s;
+
             }
             ~ .navigation-change .btn-radio1
             {
@@ -211,6 +214,7 @@ body{
             ~ .slide
             {
                 left: -100%;
+                transition: 1s;
             }
             ~ .navigation-change .btn-radio2
             {
@@ -222,6 +226,7 @@ body{
             ~ .slide
             {
                 left: -200%;
+                transition: 1s;
             }
             ~ .navigation-change .btn-radio3
             {
@@ -233,6 +238,7 @@ body{
             ~ .slide
             {
                 left: -300%;
+                transition: 1s;
             } 
             ~ .navigation-change .btn-radio4
             {
@@ -242,13 +248,14 @@ body{
     }       
 
 }
-.container-fluid{
+.slogan{
     width: 100%;
     height: auto;
     clear: both;
-    margin-top: 1%;
+    margin-top: 2%;
     h1{
         width: 100%;
+        margin-top: 1%;
         font-size: 3rem;
         text-align: center;
         color:rgba(19, 17, 15, 0.575) ;
@@ -257,30 +264,36 @@ body{
     }
     p{
         width: 70%;
+        margin-top: 2%;
         margin-left: 15%;
         text-align: center;
         font-family:  'Barlow Condensed', sans-serif;
         color: rgb(20, 20, 20);
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 400;
         border-radius: 20pxs;
         font-style: italic;
     }
 }
-.container-fluid .show-images{
+.service
+{
+padding: 0px;
+ .show-images{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
     position: relative;
     left: 0%;
+    .demo-img-first:first-child{
+        margin-left: 0px;
+    }
     .demo-img-first{
-        width:24%;
-        height:auto;
-        margin-bottom: 1%;
+        width:24.5%;
+        height:30%;
+        margin-left: 0.6%;
         position: relative;
-
         img{
             width: 100%;
             height: 100%;
@@ -293,14 +306,70 @@ body{
             top: 25%;
             left: 25%;
             font-size: 1.4rem;
-            color:rgb(59, 58, 58) ;
+            color: $color-text ;
             font-family:  'Barlow Condensed', sans-serif;
-            background-color: rgb(248, 233, 242,0.6);
+            background-color: rgb(248, 233, 242,0.7);
             border: none;
             text-align: center;
-            font-weight: bold;
+            font-weight: 500;
+        }       
+    }
+}
+}
+.products{
+    padding: 0px;
+    .catagory{
+        margin-top: 1%;
+        text-align: center;
+        a{
+            color:rgba(19, 17, 15, 0.575) ;
+            font-size: 2rem;
+            font-family: $font_logo;
+            height: 10%;          
         }
-        
+        a:hover{
+            background-color: antiquewhite;
+            text-decoration: none;        
+        }
+    }
+    .banner-order{
+        margin-top: 1%;
+        height: 40%;
+        margin-top: 1%;
+        img{
+            width: 100%;
+            height: 520px;
+        }
+        h2{
+            width: 100%;
+            height: 30%;
+            font-size: 2rem;
+            text-align: center;
+            margin-top:8%;
+            font-family: $font-product;
+            color: $color-title;
+        }
+        p{
+            width: 100%;
+            height: 30%;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-size:1.5rem ;
+            color: $color-text;
+            font-family: $font-text;
+        }
+        button{
+            width: 50%;
+            height: 10%;
+            margin-left: 25%;
+            background-color: rgba(216, 125, 35, 0.169);
+            border: 0.2px solid rgba(139, 132, 132, 0.51);
+            font-family: $font-text;
+            color: $color-text;
+            font-weight: 400;
+            font-size: 1.6rem;
+        }
     }
 }
 .search{

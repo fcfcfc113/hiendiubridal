@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=Great+Vibes&family=Lobster&family=Noto+Serif+Display:ital,wght@0,200;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
 body {
   margin: 0px auto;
   padding: 0px;
-  background-color: rgba(251, 242, 247, 0.76);
-  width: 1920px;
+  background-color: rgba(247, 224, 202, 0.311);
+  width: auto;
 }
 
 .header {
   width: 100%;
-  height: 760px;
-  background-image: linear-gradient(rgba(248, 228, 228, 0.2), rgba(219, 205, 213, 0.2)), url("../img/bg5.jpg");
-  background-size: cover;
+  height: 600px;
   position: relative;
 }
 .header .logo {
@@ -26,7 +25,7 @@ body {
 }
 .header .logo a {
   font-family: "Great Vibes", cursive;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
   top: 2%;
@@ -52,7 +51,7 @@ body {
 }
 .header .links ul li a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: rgba(251, 251, 251, 0.993);
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
@@ -146,7 +145,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: 1s;
 }
 .header .slides .slide img {
   object-fit: cover;
@@ -171,8 +169,7 @@ body {
   cursor: pointer;
 }
 .header .slides .navigation label:hover {
-  background-color: antiquewhite;
-  transition: 1s;
+  background-color: #ddcdbb;
 }
 .header .slides .navigation-change {
   position: absolute;
@@ -193,87 +190,156 @@ body {
 }
 .header .slides #radio1:checked ~ .slide {
   left: 0%;
+  transition: 1s;
 }
 .header .slides #radio1:checked ~ .navigation-change .btn-radio1 {
   background-color: rgba(246, 199, 117, 0.5);
 }
 .header .slides #radio2:checked ~ .slide {
   left: -100%;
+  transition: 1s;
 }
 .header .slides #radio2:checked ~ .navigation-change .btn-radio2 {
   background-color: rgba(246, 199, 117, 0.5);
 }
 .header .slides #radio3:checked ~ .slide {
   left: -200%;
+  transition: 1s;
 }
 .header .slides #radio3:checked ~ .navigation-change .btn-radio3 {
   background-color: rgba(246, 199, 117, 0.5);
 }
 .header .slides #radio4:checked ~ .slide {
   left: -300%;
+  transition: 1s;
 }
 .header .slides #radio4:checked ~ .navigation-change .btn-radio4 {
   background-color: rgba(246, 199, 117, 0.5);
 }
 
-.container-fluid {
+.slogan {
   width: 100%;
   height: auto;
   clear: both;
-  margin-top: 1%;
+  margin-top: 2%;
 }
-.container-fluid h1 {
+.slogan h1 {
   width: 100%;
+  margin-top: 1%;
   font-size: 3rem;
   text-align: center;
   color: rgba(19, 17, 15, 0.575);
   font-family: "Great Vibes", cursive;
 }
-.container-fluid p {
+.slogan p {
   width: 70%;
+  margin-top: 2%;
   margin-left: 15%;
   text-align: center;
   font-family: "Barlow Condensed", sans-serif;
   color: #141414;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
   border-radius: 20pxs;
   font-style: italic;
 }
 
-.container-fluid .show-images {
+.service {
+  padding: 0px;
+}
+.service .show-images {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   position: relative;
   left: 0%;
 }
-.container-fluid .show-images .demo-img-first {
-  width: 24%;
-  height: auto;
-  margin-bottom: 1%;
+.service .show-images .demo-img-first:first-child {
+  margin-left: 0px;
+}
+.service .show-images .demo-img-first {
+  width: 24.5%;
+  height: 30%;
+  margin-left: 0.6%;
   position: relative;
 }
-.container-fluid .show-images .demo-img-first img {
+.service .show-images .demo-img-first img {
   width: 100%;
   height: 100%;
   opacity: 0.9;
 }
-.container-fluid .show-images .demo-img-first button {
+.service .show-images .demo-img-first button {
   position: absolute;
   width: 50%;
   height: 10%;
   top: 25%;
   left: 25%;
   font-size: 1.4rem;
-  color: #3b3a3a;
+  color: #141414;
   font-family: "Barlow Condensed", sans-serif;
-  background-color: rgba(248, 233, 242, 0.6);
+  background-color: rgba(248, 233, 242, 0.7);
   border: none;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.products {
+  padding: 0px;
+}
+.products .catagory {
+  margin-top: 1%;
+  text-align: center;
+}
+.products .catagory a {
+  color: rgba(19, 17, 15, 0.575);
+  font-size: 2rem;
+  font-family: "Great Vibes", cursive;
+  height: 10%;
+}
+.products .catagory a:hover {
+  background-color: antiquewhite;
+  text-decoration: none;
+}
+.products .banner-order {
+  margin-top: 1%;
+  height: 40%;
+  margin-top: 1%;
+}
+.products .banner-order img {
+  width: 100%;
+  height: 520px;
+}
+.products .banner-order h2 {
+  width: 100%;
+  height: 30%;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 8%;
+  font-family: "Playfair Display", serif;
+  color: rgba(19, 17, 15, 0.575);
+}
+.products .banner-order p {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.5rem;
+  color: #141414;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.products .banner-order button {
+  width: 50%;
+  height: 10%;
+  margin-left: 25%;
+  background-color: rgba(216, 125, 35, 0.169);
+  border: 0.2px solid rgba(139, 132, 132, 0.51);
+  font-family: "Barlow Condensed", sans-serif;
+  color: #141414;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .search {
